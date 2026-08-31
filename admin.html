@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Panel de administración — Visión Zero</title>
+<link rel="stylesheet" href="css/styles.css" />
+<style>
+  .sbe-admin-shell { max-width: 1040px; margin: 0 auto; padding: 40px 28px 80px; }
+  .sbe-admin-back { font-size: 0.85rem; color: var(--sbe-ink-soft); text-decoration: underline; }
+  .sbe-admin-shell h1 { font-family: var(--sbe-font-display); font-weight: 500; margin: 18px 0 6px; color: var(--sbe-blue); }
+  .sbe-admin-shell h2 { font-family: var(--sbe-font-display); font-weight: 500; font-size: 1.25rem; margin: 40px 0 14px; color: var(--sbe-blue); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.88rem; background: var(--sbe-bg-raised); border-radius: var(--sbe-radius); overflow: hidden; }
+  th, td { border: 1px solid var(--sbe-line); padding: 10px 12px; text-align: left; vertical-align: top; }
+  th { background: var(--sbe-bg-tint); font-weight: 600; color: var(--sbe-blue); }
+  .sbe-extra-cell { display: flex; flex-direction: column; gap: 4px; max-width: 220px; }
+  .sbe-extra-check { display: flex; gap: 6px; align-items: center; font-size: 0.78rem; color: var(--sbe-ink-soft); }
+  #sbe-admin-gate { padding: 60px 0; text-align: center; color: var(--sbe-ink-soft); }
+  .sbe-level-select { border: 1px solid var(--sbe-line); border-radius: var(--sbe-radius-sm); padding: 6px 8px; font-family: inherit; }
+</style>
+</head>
+<body>
+
+<header class="sbe-header">
+  <div class="sbe-shell sbe-header-inner">
+    <a class="sbe-brand" href="index.html">
+      <span class="sbe-brand-mark">Visión Zero</span>
+      <span class="sbe-brand-sub">Panel de administración</span>
+    </a>
+    <a class="sbe-admin-back" href="index.html">← Volver al sitio</a>
+  </div>
+</header>
+
+<div class="sbe-admin-shell">
+
+  <div id="sbe-admin-gate">
+    <p>Verificando permisos…</p>
+  </div>
+
+  <div id="sbe-admin-panel" class="sbe-hidden">
+    <h1>Gestión de usuarios y accesos</h1>
+    <p>Define el nivel de acceso de cada cuenta y habilita contenido individual comprado fuera del plan.</p>
+
+    <h2>Usuarios registrados</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Correo</th>
+          <th>Proveedor</th>
+          <th>Nivel de acceso</th>
+          <th>Contenido adicional habilitado</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="sbe-admin-users-body"></tbody>
+    </table>
+
+    <h2>Solicitudes de compra</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Correo</th>
+          <th>Contenido</th>
+          <th>Fecha</th>
+          <th>Estado</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody id="sbe-admin-requests-body"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/crypto-utils.js"></script>
+<script src="js/api.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/content-data.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

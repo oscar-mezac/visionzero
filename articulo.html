@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Visión Zero — Soluciones conductuales para la Seguridad y Salud en el trabajo</title>
+<title>Visión Zero</title>
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
 <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png" />
@@ -14,7 +14,7 @@
 
 <header class="sbe-header">
   <div class="sbe-shell sbe-header-inner">
-    <a class="sbe-brand" href="#top">
+    <a class="sbe-brand" href="index.html">
       <img class="sbe-brand-banner" src="assets/vision-zero-banner.png" alt="Visión Zero — Soluciones conductuales para la Seguridad y Salud en el trabajo" />
     </a>
 
@@ -31,67 +31,13 @@
   </div>
 </header>
 
-<main id="top">
-
-  <section class="sbe-hero">
-    <div class="sbe-shell sbe-hero-inner">
-      <div>
-        <h1>La mayoría de los accidentes empiezan en una decisión, no en una máquina.</h1>
-        <p>
-          Artículos y cursos sobre psicología del riesgo, cultura de seguridad
-          y observación conductual, escritos para supervisores, equipos SSOMA
-          y líderes de operaciones de alto riesgo.
-        </p>
-        <div class="sbe-hero-actions">
-          <button class="sbe-btn sbe-btn-solid" data-open-auth="register">Crear cuenta gratis</button>
-          <a class="sbe-btn" href="#articulos">Ver contenido</a>
-        </div>
-      </div>
-      <div class="sbe-hero-stat">
-        <div class="num">88%</div>
-        <div class="label">de los incidentes en terreno involucran un factor conductual, no solo técnico.</div>
-      </div>
+<main>
+  <div class="sbe-shell sbe-article-shell">
+    <a class="sbe-btn-plain sbe-article-back" href="index.html">← Volver al catálogo</a>
+    <div id="sbe-article-content">
+      <p>Cargando…</p>
     </div>
-  </section>
-
-  <section class="sbe-section" id="articulos">
-    <div class="sbe-shell">
-      <div class="sbe-section-head">
-        <div>
-          <h2>Artículos</h2>
-        </div>
-      </div>
-      <div class="sbe-content-grid" id="sbe-articulos-grid"></div>
-    </div>
-  </section>
-
-  <section class="sbe-section" id="herramientas">
-    <div class="sbe-shell">
-      <div class="sbe-section-head">
-        <div>
-          <h2>Herramientas</h2>
-        </div>
-      </div>
-      <div class="sbe-content-grid">
-        <article class="sbe-card sbe-card-summary">
-          <h3>Cuestionario de identificación y evaluación de Factores de Riesgo Psicosociales en los lugares de trabajo</h3>
-          <a class="sbe-btn sbe-btn-solid" href="herramienta-riesgos-psicosociales.html">Abrir cuestionario</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="sbe-section" id="cursos">
-    <div class="sbe-shell">
-      <div class="sbe-section-head">
-        <div>
-          <h2>Cursos</h2>
-        </div>
-      </div>
-      <div class="sbe-content-grid" id="sbe-cursos-grid"></div>
-    </div>
-  </section>
-
+  </div>
 </main>
 
 <footer class="sbe-footer">
@@ -144,7 +90,6 @@
   <div class="sbe-modal">
     <button class="sbe-modal-close" data-close-modal aria-label="Cerrar">✕</button>
 
-    <!-- Pantalla de inicio de sesión: solo los elementos para iniciar sesión -->
     <div id="sbe-login-screen">
       <h2 class="sbe-modal-title">Iniciar sesión</h2>
       <form class="sbe-form" id="sbe-login-form">
@@ -164,7 +109,6 @@
       </p>
     </div>
 
-    <!-- Pantalla de registro: solo los elementos para crear una cuenta -->
     <div id="sbe-register-screen" class="sbe-hidden">
       <h2 class="sbe-modal-title">Crear cuenta</h2>
       <form class="sbe-form" id="sbe-register-form">
@@ -198,11 +142,11 @@
 <script src="js/api.js"></script>
 <script src="js/toast.js"></script>
 <script src="js/content-data.js"></script>
+<script src="js/content-access.js"></script>
 <script src="js/auth.js"></script>
-<script src="js/content.js"></script>
 <script src="js/auth-ui.js"></script>
 <script src="js/google-auth.js"></script>
 <script src="js/header-ui.js"></script>
-<script src="js/main.js"></script>
+<script src="js/articulo.js"></script>
 </body>
 </html>

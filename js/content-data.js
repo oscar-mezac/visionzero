@@ -80,7 +80,7 @@ window.SBE_CONTENT = [
     tipo: "Curso",
     nivel: "premium",
     precio: "S/ 129",
-    titulo: "Programa de Observación y Retroalimentación Conductual",
+    titulo: "Implementación de Programas de Seguridad Basada en el Comportamiento (SBC)",
     resumen:
       "Curso completo con módulos, casos de terreno y plantillas descargables para implementar un programa de SBC en tu proyecto.",
     cuerpo: `

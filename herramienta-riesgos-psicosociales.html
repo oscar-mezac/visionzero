@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cuestionario de Factores de Riesgo Psicosociales — Visión Zero</title>
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png" />
+<link rel="stylesheet" href="css/styles.css" />
+<style>
+  .sbe-tool-shell { max-width: 720px; margin: 0 auto; padding: 48px 28px 90px; }
+  .sbe-tool-shell h1 {
+    font-family: var(--sbe-font-display);
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: var(--sbe-blue);
+    margin: 18px 0 4px;
+  }
+  .sbe-tool-version {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--sbe-green-deep);
+    background: var(--sbe-green-soft);
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .sbe-tool-intro { color: var(--sbe-ink-soft); margin: 0 0 32px; max-width: 60ch; }
+  .sbe-tool-section {
+    background: var(--sbe-bg-raised);
+    border: 1px solid var(--sbe-line);
+    border-radius: var(--sbe-radius);
+    padding: 28px 26px;
+    margin-bottom: 22px;
+  }
+  .sbe-tool-section h2 {
+    font-family: var(--sbe-font-display);
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--sbe-blue);
+    margin: 0 0 18px;
+  }
+  .sbe-tool-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .sbe-tool-grid .sbe-form-full { grid-column: 1 / -1; }
+  .sbe-form select {
+    border: 1px solid var(--sbe-line);
+    border-radius: var(--sbe-radius-sm);
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background: var(--sbe-white);
+  }
+  .sbe-likert-item {
+    border-top: 1px solid var(--sbe-line);
+    padding-top: 20px;
+    margin-top: 4px;
+  }
+  .sbe-likert-question { font-size: 0.95rem; margin: 0 0 6px; color: var(--sbe-ink); }
+  .sbe-likert-hint { font-size: 0.78rem; color: var(--sbe-ink-soft); margin: 0 0 14px; }
+  .sbe-likert-scale { display: flex; gap: 10px; flex-wrap: wrap; }
+  .sbe-likert-option {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border: 1px solid var(--sbe-line);
+    border-radius: var(--sbe-radius-sm);
+    padding: 9px 16px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .sbe-likert-option:has(input:checked) {
+    border-color: var(--sbe-green);
+    background: var(--sbe-green-soft);
+  }
+  .sbe-likert-option input { accent-color: var(--sbe-green-deep); }
+  .sbe-tool-submit { margin-top: 8px; }
+  @media (max-width: 560px) {
+    .sbe-tool-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="sbe-header">
+  <div class="sbe-shell sbe-header-inner">
+    <a class="sbe-brand" href="index.html">
+      <img class="sbe-brand-banner" src="assets/vision-zero-banner.png" alt="Visión Zero" />
+    </a>
+    <a class="sbe-btn-plain" href="index.html#herramientas">← Volver al sitio</a>
+  </div>
+</header>
+
+<main>
+  <div class="sbe-tool-shell">
+    <span class="sbe-tool-version">Versión actualizada 2026</span>
+    <h1>Cuestionario de identificación y evaluación de Factores de Riesgo Psicosociales en los lugares de trabajo</h1>
+    <p class="sbe-tool-intro">
+      Completa tus datos y responde cada afirmación según qué tan de acuerdo estás,
+      pensando en tu puesto de trabajo actual.
+    </p>
+
+    <form class="sbe-form" id="sbe-riesgos-form">
+
+      <div class="sbe-tool-section">
+        <h2>Datos generales</h2>
+        <div class="sbe-tool-grid">
+          <label>Edad
+            <input type="number" name="edad" min="18" max="80" required />
+          </label>
+          <label>Fecha
+            <input type="date" name="fecha" required />
+          </label>
+          <label class="sbe-form-full">Puesto de trabajo
+            <input type="text" name="puesto" required />
+          </label>
+          <label>Género
+            <select name="genero" required>
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="Masculino">Masculino</option>
+              <option value="Femenino">Femenino</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="sbe-tool-section">
+        <h2>Cuestionario</h2>
+
+        <div class="sbe-likert-item">
+          <p class="sbe-likert-question">1. El trabajo que realiza me permite desarrollar habilidades y conocimientos nuevos</p>
+          <p class="sbe-likert-hint">1 = Totalmente en desacuerdo &nbsp;·&nbsp; 4 = Totalmente de acuerdo</p>
+          <div class="sbe-likert-scale">
+            <label class="sbe-likert-option"><input type="radio" name="p1" value="1" required /> 1</label>
+            <label class="sbe-likert-option"><input type="radio" name="p1" value="2" /> 2</label>
+            <label class="sbe-likert-option"><input type="radio" name="p1" value="3" /> 3</label>
+            <label class="sbe-likert-option"><input type="radio" name="p1" value="4" /> 4</label>
+          </div>
+        </div>
+      </div>
+
+      <button class="sbe-btn sbe-btn-solid sbe-tool-submit" type="submit">Enviar respuestas</button>
+    </form>
+  </div>
+</main>
+
+<script src="js/config.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/riesgos-psicosociales.js"></script>
+</body>
+</html>

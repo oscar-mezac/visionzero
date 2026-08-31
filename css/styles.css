@@ -78,10 +78,15 @@ button { font-family: inherit; cursor: pointer; }
 
 .sbe-brand {
   display: flex;
-  align-items: baseline;
-  gap: 10px;
+  align-items: center;
   text-decoration: none;
   color: var(--sbe-ink);
+}
+
+.sbe-brand-banner {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
 .sbe-brand-mark {
@@ -96,6 +101,7 @@ button { font-family: inherit; cursor: pointer; }
   color: var(--sbe-ink-soft);
   border-left: 1px solid var(--sbe-line);
   padding-left: 10px;
+  margin-left: 10px;
 }
 
 .sbe-actions { display: flex; align-items: center; gap: 12px; }
@@ -261,33 +267,6 @@ button { font-family: inherit; cursor: pointer; }
   margin: 6px 0 0;
 }
 
-/* ---------- Pillars (intro concepts) ---------- */
-.sbe-pillars {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--sbe-line);
-  border: 1px solid var(--sbe-line);
-  border-radius: var(--sbe-radius);
-  overflow: hidden;
-}
-
-.sbe-pillar {
-  background: var(--sbe-bg-raised);
-  padding: 28px 26px;
-  border-top: 3px solid var(--sbe-green);
-}
-
-.sbe-pillar h3 {
-  font-family: var(--sbe-font-display);
-  font-weight: 500;
-  font-size: 1.15rem;
-  margin: 0 0 10px;
-  color: var(--sbe-blue);
-}
-
-.sbe-pillar p { color: var(--sbe-ink-soft); font-size: 0.94rem; margin: 0; }
-
 /* ---------- Content grid ---------- */
 .sbe-content-grid {
   display: grid;
@@ -355,6 +334,55 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .sbe-price { font-weight: 600; color: var(--sbe-blue); }
+
+/* Tarjetas resumen: solo título + botón, usadas en Artículos, Herramientas y Cursos */
+.sbe-card-summary {
+  justify-content: space-between;
+  min-height: 148px;
+}
+
+.sbe-card-summary h3 {
+  font-family: var(--sbe-font-display);
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--sbe-blue);
+  margin: 0;
+}
+
+.sbe-card-summary .sbe-btn { align-self: flex-start; }
+
+/* ---------- Página de detalle (artículo / curso) ---------- */
+.sbe-article-shell {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 0 90px;
+}
+
+.sbe-article-back {
+  display: inline-block;
+  margin-bottom: 26px;
+}
+
+.sbe-article-title {
+  font-family: var(--sbe-font-display);
+  font-weight: 500;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  color: var(--sbe-blue);
+  margin: 14px 0 10px;
+  line-height: 1.2;
+}
+
+.sbe-article-resumen {
+  color: var(--sbe-ink-soft);
+  font-size: 1.05rem;
+  margin: 0 0 30px;
+}
+
+.sbe-article-body { font-size: 1rem; line-height: 1.75; }
+
+.sbe-article-body p { margin: 0 0 18px; }
+
+.sbe-article-body.sbe-locked { color: var(--sbe-ink-soft); }
 
 /* ---------- Footer ---------- */
 .sbe-footer {
@@ -559,7 +587,6 @@ a:focus-visible {
 /* ---------- Responsive ---------- */
 @media (max-width: 780px) {
   .sbe-hero-inner { grid-template-columns: 1fr; padding: 56px 0 48px; }
-  .sbe-pillars { grid-template-columns: 1fr; }
   .sbe-section-head { flex-direction: column; align-items: flex-start; }
   .sbe-footer-inner { flex-direction: column; align-items: flex-start; }
 }
